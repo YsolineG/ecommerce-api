@@ -31,3 +31,23 @@ $factory->define(App\Product::class, function (Faker\Generator $faker) {
         'stock'=>$faker->randomDigit
     ];
 });
+
+$factory->define(App\Category::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+    ];
+});
+
+$factory->define(App\Customer::class, function (Faker\Generator $faker) {
+    return [
+        'name'=> $faker->name,
+        'firstname'=> $faker->firstName,
+        'adress'=> $faker->address,
+    ];
+});
+
+$factory->define(App\Order::class, function (Faker\Generator $faker) {
+    return [
+        'ordered_date' => $faker->dateTime,
+    ];
+});
